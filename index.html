@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Glass Form</title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="contenedor">
+        <form method="get" novalidate="novalidate" onsubmit="return validar();">
+            <div class="contenido">
+                <div class="primero">
+                    <label class="section">DATOS PERSONALES</label>
+                </div>
+                <label for="name">Nombre Completo: <br><span></span></label>
+                <input id="name" class="form1" type="text" name="nombre" />
+                <br>
+                <br>
+                <label for="email">eMail: <br><span></span></label>
+                <input id="email" class="form1" type="email" name="email" pattern="[a-z]{3,}@{a-z]{3,}[.][a-z]{2,4}"
+                    placeholder="usuari@dominio.es" />
+                <br>
+                <br>
+                <div>
+                    <label for="job">Job Role:</label>
+                    <select id="job" name="user_job" class="form2">
+                        <option value=""></option>
+                        <optgroup class="desplegable" label="Web">
+                            <option value="frontend_developer">Front-End Developer</option>
+                            <option value="php_developer">PHP Developer</option>
+                            <option value="python_developer">Python Developer</option>
+                            <option value="rails_developer">Rails Developer</option>
+                            <option value="web_designer">Web Designer</option>
+                            <option value="wordpress_developer">Wordpress Developer</option>
+                        </optgroup>
+                        <optgroup label="Mobile">
+                            <option value="android_developer">Android Developer</option>
+                            <option value="ios_developer">IOS Developer</option>
+                            <option value="mobile_designer">Mobile Designer</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="business_owner">Business Owner</option>
+                            <option value="freelancer">Freelancer</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="titulo">
+                    <label class="section" id="topics">CARACTERISTICAS QUE TE DEFINEN <span></span></label>
+                </div>
+                <div class="datospersonales">
+                    <label><input type="checkbox" name="topics" value="Tra" />Trabajador</label>
+                    <label><input type="checkbox" name="topics" value="Ate" />Atento</label>
+                    <label><input type="checkbox" name="topics" value="Res" />Resolutorio</label>
+                    <label><input type="checkbox" name="topics" value="Apa" />Apasionado</label>
+                    <label><input type="checkbox" name="topics" value="Soc" />Social</label>
+                    <label><input type="checkbox" name="topics" value="Ind" />Independiente</label>
+                    <label><input type="checkbox" name="topics" value="Obs" />Observador</label>
+                    <label><input type="checkbox" name="topics" value="Lid" />Lider</label>
+                    <label><input type="checkbox" name="topics" value="Tim" />Timido</label>
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="titulo">
+                    <label class="section" id="duration">TYPE OF SUBSCRIPTION <span></span></label>
+                </div>
+                <div class="cont3">
+                    <label><input type="radio" name="duration" value="mon" />Monthly</label>
+                    <label><input type="radio" name="duration" value="qua" />Quarterly</label>
+                    <label><input type="radio" name="duration" value="sem" />Biannually</label>
+                    <label><input type="radio" name="duration" value="yea" />Yearly</label>
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="titulo">
+                    <label class="section" id="topics">COMENTARIOS <span></span></label>
+                </div>
+                <div>
+                    <textarea class="comentarios" name="bio"></textarea>
+                </div>
+            </div>
+            <input class="btn" type="submit" value="Enviar" />
+        </form>
+    </div>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
